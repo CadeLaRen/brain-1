@@ -1,5 +1,5 @@
 /********* blob robotics 2014 *********
- *  title: bLoc.h
+ *  title: loc.h
  *  brief: interface for localization
  * author: adrian jimenez-gonzalez
  * e-mail: blob.robotics@gmail.com
@@ -7,9 +7,9 @@
 #ifndef B_LOCALIZATION_H
 #define B_LOCALIZATION_H
 
-#include "bImu.h"
-#include "bBaro.h"
-#include "bTask.h"
+#include "blob/imu.h"
+#include "blob/baro.h"
+#include "blob/task.h"
 
 namespace blob {
 

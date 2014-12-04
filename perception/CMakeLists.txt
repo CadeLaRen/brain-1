@@ -5,7 +5,7 @@ endif(${PLATFORM} MATCHES "Arduino")
 
 cmake_minimum_required (VERSION 2.8.5)
 cmake_policy(VERSION 2.8.5)
-project(bPerception)
+project(perception)
 
 # flags for debug version: "-DCMAKE_BUILD_TYPE=Debug/Release"
 if(${CMAKE_BUILD_TYPE} MATCHES "Debug")
@@ -21,12 +21,12 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 # define dependencies path
-set(BLOB_LIBS_DIR ${PROJECT_SOURCE_DIR}/../../bLibs)
-set(BLOB_TYPE_DIR ${BLOB_LIBS_DIR}/bTypes)
-set(BLOB_6DOF_DIR ${BLOB_LIBS_DIR}/b6dof)
-set(BLOB_RT_DIR ${BLOB_LIBS_DIR}/bRt)
-set(BLOB_BODY_DIR ${PROJECT_SOURCE_DIR}/../../bBody)
-set(BLOB_SENSOR_DIR ${BLOB_BODY_DIR}/bSensors)
+set(BLOB_LIBS_DIR ${PROJECT_SOURCE_DIR}/../../libs)
+set(BLOB_TYPE_DIR ${BLOB_LIBS_DIR}/types)
+set(BLOB_6DOF_DIR ${BLOB_LIBS_DIR}/6dof)
+set(BLOB_RT_DIR ${BLOB_LIBS_DIR}/rt)
+set(BLOB_BODY_DIR ${PROJECT_SOURCE_DIR}/../../body)
+set(BLOB_SENSOR_DIR ${BLOB_BODY_DIR}/sensors)
 
 # include directories (-I)
 include_directories(${PROJECT_SOURCE_DIR}/include
@@ -39,7 +39,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include
 link_directories(${BLOB_RT_DIR}/lib)
 
 # sources
-set(LIB_SRC src/bLoc.cpp)
+set(LIB_SRC src/loc.cpp)
 
 # libs to link
 set(LIB_LIBS blob_rt)

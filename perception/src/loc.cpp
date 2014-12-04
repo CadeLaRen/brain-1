@@ -1,10 +1,10 @@
 /********* blob robotics 2014 *********
- *  title: bLoc.cpp
+ *  title: loc.cpp
  *  brief: implementation of localization
  * author: adrian jimenez-gonzalez
  * e-mail: blob.robotics@gmail.com
  **************************************/
-#include "bLoc.h" 
+#include "blob/loc.h" 
 
 #if defined(__linux__)
   #include <iostream>
